@@ -1,37 +1,38 @@
 # Sharan Senthil's site
 
-A plain HTML/CSS/JS personal site. No build step, no framework, nothing to install.
+Plain HTML, CSS and a little JavaScript, hosted free on GitHub Pages. The only "build" is GitHub Pages' built-in Jekyll, and it is used only for the blog.
 
 ## Files
-- `index.html`, `about.html`, `projects.html`, `blog.html`, `now.html`, `uses.html`, `reading.html`, `bucket-list.html` (peaks), `guestbook.html`, `friends.html`
-- `post-*.html`: blog posts. Copy one to make a new post, then link it from `blog.html` and `index.html`.
-- `style.css`: the whole look (classic-Mac windows, marquee, scanlines). Colours are at the top.
-- `img/`: the manga panels after effects (halftone, 1-bit dither, tape glitch, negative), the avatar, the 88x31 buttons and two background tiles.
-- `site.js`: the marquee, banner, nav, sidebar, footer, visit counter (stored only in the visitor's browser) and the peak ticks. Your LinkedIn link and the marquee text are the first lines of the file.
-- `404.html`: shown for missing pages on GitHub Pages.
+- `index.html`, `about.html`, `projects.html`, `reading.html`: the pages. Edit them directly.
+- `bucket-list.html`: the old peaks page. It is hidden (not in the menu, not indexed). Add `["bucket-list.html", "peaks"]` to `PAGES` in `site.js` to bring it back.
+- `site.js`: header, menu, sidebar, footer. Your LinkedIn link and the menu list are at the top.
+- `style.css`: the whole look. Colours are at the top.
+- `img/`: the manga panels (edited), the avatar and the poster/report previews.
+- `files/`: the past-year posters and reports (PDF).
+- `blog.html`, `_layouts/post.html`, `_config.yml`, `_posts/`: the blog.
 
-## Fill in before publishing
-- Your email in `about.html` (currently `you@example.com`)
-- The "fill this in" lines in `uses.html`
-- Project details and links in `projects.html`
-- Friends in `friends.html`
-- The "On the list" lines in `reading.html`
-- Delete anything you don't want public. Read every page once before you publish.
+## Add a blog post
+1. On github.com, open the repo, go to **Add file > Create new file**.
+2. Name it `_posts/YYYY-MM-DD-my-title.md` (for example `_posts/2026-12-05-first-post.md`). The date in the name is the post date. The words after it become the web address.
+3. Paste this at the top, then write the post below it in Markdown:
 
-## Put it online for free (GitHub Pages)
-1. Make a free account at github.com.
-2. Click **New repository**. Name it `YOUR-USERNAME.github.io` (exactly), set it to **Public**, and create it.
-3. Click **uploading an existing file**, drag in every file from this folder, and commit.
-4. Go to **Settings > Pages**, set Source to **Deploy from a branch**, branch **main**, folder **/ (root)**, and save.
-5. After a minute it's live at `https://YOUR-USERNAME.github.io`.
+```
+---
+title: "My first post"
+summary: "One line shown on the blog list (optional)"
+---
 
-Later you can buy a domain (about $10 to $15 a year) and point it at the same site under Settings > Pages > Custom domain.
+Write here. A blank line starts a new paragraph. **bold**, *italic*, [a link](https://example.com).
 
-## Turn on the guestbook (free, uses GitHub Discussions)
-1. In your repo: **Settings > General > Features**, tick **Discussions**.
-2. Install the giscus app on the repo: https://github.com/apps/giscus
-3. Open https://giscus.app, enter `YOUR-USERNAME/YOUR-USERNAME.github.io`, make a category called "Guestbook" (type Announcements), and copy the `data-repo-id` and `data-category-id` values.
-4. Put them in the `GISCUS` block at the bottom of `guestbook.html`.
+![alt text](img/my-picture.jpg)
+```
+
+4. Click **Commit changes**. After about a minute the post appears on the blog page. Put any pictures in `img/`.
+
+To remove a post, delete its file. A date in the future hides the post until that day.
+
+## Add a past project
+Put the PDF in `files/`, a preview image in `img/`, and copy one of the `<article class="work">` blocks in `projects.html`.
 
 ## Privacy
-No analytics, cookies or trackers. Ticks on the peaks page and the flag click count are stored only in each visitor's own browser. The fonts (Shippori Mincho, VT323) load from Google Fonts; to avoid that, download it and host it in the repo.
+No analytics, cookies or trackers. The visit counter in the sidebar is stored only in each visitor's own browser. Fonts (Shippori Mincho, VT323) load from Google Fonts.

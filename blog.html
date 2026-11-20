@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +12,19 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="top"></div>
+<div id="top"><noscript><p style="padding:1rem"><a href="index.html">home</a> · <a href="about.html">about</a> · <a href="projects.html">projects</a> · <a href="blog.html">blog</a> · <a href="reading.html">reading</a></p></noscript></div>
 <div class="page">
 <main class="col">
-<section class="win"><div class="bar"><span>blog/</span></div><div class="in">
+<section class="win"><div class="bar"><span>blog</span></div><div class="in">
+<figure class="pic dither float" style="width:11rem"><img src="img/moon-dither.png" alt="Dithered manga illustration of a tall figure standing on top of a glowing moon" width="522" height="771"></figure>
 <h1>Blog</h1>
+{% if site.posts.size > 0 %}
 <ul class="plain">
-<li><span class="meta">2026-11-19</span><br><a class="t" href="post-zero-summits.html">Zero summits (so far)</a><br>Why a climbing site starts with someone who hasn't climbed anything.</li>
-<li><span class="meta">2026-11-19</span><br><a class="t" href="post-free-site.html">How this site runs for free</a><br>Plain HTML, GitHub Pages, no bill, no build step.</li>
-</ul>
+{% for post in site.posts %}<li><span class="meta">{{ post.date | date: "%Y-%m-%d" }}</span><br><a class="t" href="{{ post.url }}">{{ post.title }}</a>{% if post.summary %}<br>{{ post.summary }}{% endif %}</li>
+{% endfor %}</ul>
+{% else %}
+<p>There aren't any posts yet. When I write something, it will show up here.</p>
+{% endif %}
 </div></section>
 </main>
 <aside id="side"></aside>

@@ -1,0 +1,11 @@
+# Jekyll is built into GitHub Pages. It is only used for the blog (posts in _posts/).
+title: Sharan Senthil
+permalink: /post-:title.html
+exclude:
+  - README.md
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

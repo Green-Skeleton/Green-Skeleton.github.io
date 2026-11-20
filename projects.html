@@ -10,21 +10,41 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="top"></div>
+<div id="top"><noscript><p style="padding:1rem"><a href="index.html">home</a> · <a href="about.html">about</a> · <a href="projects.html">projects</a> · <a href="blog.html">blog</a> · <a href="reading.html">reading</a></p></noscript></div>
 <div class="page">
 <main class="col">
-<section class="win"><div class="bar"><span>projects/</span></div><div class="in">
+<figure class="pic cover" style="height:13rem"><img src="img/astronauts.jpg" alt="Manga panel of astronauts kneeling in a long line across a field of grass, saluting toward a figure floating in a black sky" style="object-position:50% 33%" width="734" height="1145"></figure>
+<section class="win"><div class="bar"><span>research</span></div><div class="in">
 <h1>Projects</h1>
+<p>Past science fair work. Each project has the poster and the full research report as PDFs.</p>
+<article class="work">
+<h3>Peptide inhibitor for the peanut allergen Ara h 2</h3>
+<span class="meta">2025-26 &middot; Delaware Valley Science Fair 2026</span>
+<p>Peanut allergy is the leading cause of fatal food-induced anaphylaxis, and most of it is driven by one protein, Ara h 2. I designed a short peptide, RLPYSPSQDP, meant to compete with the sites on Ara h 2 that IgE antibodies bind to, so the immune system doesn't react to the allergen.</p>
+<p>I generated and filtered peptide variants for immunogenicity, docked them to the antibody, and ran 20 ns molecular dynamics simulations. The lead peptide stayed stable (backbone RMSD of 0.15 nm) and outperformed the native controls. A second phase simulated a chitosan and PEG matrix to model how the peptide could be delivered through the nose. The project earned a Certificate of Achievement from the Delaware Valley Chapter PDA.</p>
+<div class="docs">
+<div class="doc"><a href="files/poster-2026.pdf"><figure class="pic"><img src="img/poster-2026.jpg" alt="Science fair poster on a peptide inhibitor for the peanut allergen Ara h 2" width="1500" height="1125" loading="lazy"></figure><span class="cap">Poster (PDF)</span></a></div>
+<div class="doc"><a href="files/report-2026.pdf"><figure class="pic"><img src="img/report-2026.jpg" alt="Cover page of the research report" width="510" height="660" loading="lazy"></figure><span class="cap">Research report (PDF, 30 pages)</span></a></div>
+</div>
+</article>
+<article class="work">
+<h3>Exploring compression algorithms</h3>
+<span class="meta">2024-25 &middot; Delaware Valley Science Fair 2025</span>
+<p>I compared five lossless compression algorithms (Arithmetic coding, Golomb, LZW, Burrows-Wheeler and Huffman) on 245 files across seven file types. I wrote each algorithm in Python and recorded compression ratio, compression time and decompression time.</p>
+<p>Text compressed the most, with Arithmetic and Huffman coding cutting it by roughly 56 to 80 percent. Files that are already compressed, like JPEG and MP4, barely changed, and Golomb coding made most files larger. Which algorithm is best depends on the file type and whether speed or size matters more.</p>
+<div class="docs">
+<div class="doc"><a href="files/poster-2025.pdf"><figure class="pic"><img src="img/poster-2025.jpg" alt="Science fair poster on lossless compression algorithms" width="1500" height="1125" loading="lazy"></figure><span class="cap">Poster (PDF)</span></a></div>
+<div class="doc"><a href="files/report-2025.pdf"><figure class="pic"><img src="img/report-2025.jpg" alt="Cover page of the research report" width="510" height="660" loading="lazy"></figure><span class="cap">Research report (PDF, 18 pages)</span></a></div>
+</div>
+</article>
+</div></section>
+<section class="win"><div class="bar"><span>other work</span></div><div class="in">
 <ul class="row">
-<li><h3>Catheter path planning</h3><span class="tag">science fair</span><span class="tag">2026-27</span><p>My science fair project this year. Planning a route for a catheter through the body so it gets where it needs to go safely.</p></li>
-<li><h3>Peanut allergy peptide</h3><span class="tag">research</span><span class="tag">2026</span><p>Research on a mucoadhesive peptide, designed for good pharmacokinetics, that competes with the binding site of a major peanut allergen (Ara h 2) to help prevent allergic responses. Recognized with a Certificate of Achievement from the Delaware Valley Chapter PDA.</p></li>
-<li><h3>SSELF website and merch store</h3><span class="tag">web</span><span class="tag">merch director</span><p>On the SSELF IT team since Oct 2025: I built the website and helped with the database behind it. As Merchandise Director I led a team of five that built out the merch store, which brought in about $600.</p></li>
-<li><h3>Science Olympiad</h3><span class="tag">president</span><p>Running the club with the student leadership team: meetings, recruiting, and club fair.</p></li>
-<li><h3>STEM research mentoring</h3><span class="tag">lead mentor</span><p>Lead mentor in my school's STEM Research Club, helping newer members turn a question into a project.</p></li>
-<li><h3>DECA</h3><span class="tag">business plan</span><p>Business competitions. This year I'm writing a business plan for the written events and aiming for PA DECA states.</p></li>
-<li><h3>This website</h3><span class="tag">html</span><span class="tag">css</span><span class="tag">js</span><p>Hand-written HTML, CSS and a little JavaScript. Free hosting, no framework, no tracking.</p></li>
+<li><h3>SSELF website and merch store</h3><span class="tag">web</span><span class="tag">merchandise</span><p>On the SSELF IT team since October 2025: I built the website and helped with the database behind it. As Merchandise Director I led a team of five that built the merch store, which brought in about $600.</p></li>
+<li><h3>Science Olympiad</h3><span class="tag">president</span><p>I run the club with the student leadership team: meetings, recruiting and club fair.</p></li>
+<li><h3>STEM research mentoring</h3><span class="tag">lead mentor</span><p>I'm a lead mentor in my school's STEM Research Club, helping newer members turn a question into a project.</p></li>
+<li><h3>This website</h3><span class="tag">html</span><span class="tag">css</span><span class="tag">js</span><p>Hand-written HTML, CSS and a little JavaScript, hosted for free on GitHub Pages.</p></li>
 </ul>
-<p>More detail on <a href="https://www.linkedin.com/in/sharan-senthil-/" rel="me noopener">LinkedIn</a>.</p>
 </div></section>
 </main>
 <aside id="side"></aside>
