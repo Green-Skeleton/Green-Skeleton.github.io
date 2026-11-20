@@ -1,0 +1,21 @@
+# Everything on the pinboard page. Newest at the bottom, or reorder as you like.
+# type: picture | song | site | note
+#   picture: title, image (a file in img/), note (optional)
+#   song:    title, by (artist), url, note (optional)
+#   site:    title, url, note (optional)
+#   note:    title, note
+- type: note
+  title: Pinned here
+  note: Songs, websites and pictures I really like.
+- type: picture
+  title: Panel I keep coming back to
+  image: img/panel-perfect.png
+- type: picture
+  title: Astronauts
+  image: img/astronauts-tall.png
+- type: picture
+  title: Hair in the wind
+  image: img/figure-look.png
+- type: picture
+  title: Eye
+  image: img/eye-sq.png

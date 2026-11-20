@@ -1,10 +1,12 @@
 /* The shared bits: header, nav, sidebar, footer, and the visit counter.
-   To add or rename a page, edit PAGES. To change the LinkedIn link, edit LINKEDIN. */
+   To add or rename a page, edit PAGES. To change the links or email, edit LINKEDIN, GITHUB, EMAIL. */
 (function () {
   var LINKEDIN = "https://www.linkedin.com/in/sharan-senthil-/";
+  var GITHUB = "https://github.com/Green-Skeleton";
+  var EMAIL = "montage.kolash@gmail.com";
   var PAGES = [
     ["index.html", "home"], ["about.html", "about"], ["projects.html", "projects"],
-    ["blog.html", "blog"], ["reading.html", "reading"]
+    ["blog.html", "blog"], ["reading.html", "reading"], ["pinboard.html", "pinboard"]
   ];
   function store(k, v) {
     try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; }
@@ -26,22 +28,19 @@
 
   var side = document.getElementById("side");
   if (side) {
-    var n = (parseInt(store("visits"), 10) || 0) + 1;
-    store("visits", String(n));
-    var digits = String(n); while (digits.length < 4) digits = "0" + digits;
     side.className = "side";
     side.innerHTML =
       '<section class="win"><div class="bar"><span>me</span></div><div class="in">' +
-      '<img class="avatar" src="img/avatar.png" alt="Halftone close-up of a face in snow goggles" width="240" height="240">' +
-      'Sharan Senthil<br>Student, Pennsylvania<br><a href="' + LINKEDIN + '" rel="me noopener">LinkedIn</a></div></section>' +
-      '<section class="win"><div class="bar"><span>visits</span></div><div class="in">' +
-      '<div class="counter" role="img" aria-label="' + n + ' visits">' +
-      digits.split("").map(function (d) { return "<b>" + d + "</b>"; }).join("") + '</div>' +
-      'Counted in your own browser only.</div></section>';
+      '<img class="avatar" src="img/avatar.png" alt="Pixelated close-up of an eye from a manga panel" width="60" height="60">' +
+      'Sharan Senthil<br>Student, Pennsylvania</div></section>' +
+      '<section class="win"><div class="bar"><span>find me</span></div><div class="in"><ul>' +
+      '<li><a href="' + GITHUB + '" rel="me noopener">GitHub</a></li>' +
+      '<li><a href="' + LINKEDIN + '" rel="me noopener">LinkedIn</a></li>' +
+      '<li><a href="mailto:' + EMAIL + '">Email</a></li></ul></div></section>';
   }
 
   var foot = document.getElementById("foot");
-  if (foot) foot.innerHTML = "No tracking, no cookies. Manga panels on this site belong to their original artists and are edited here as decoration.";
+  if (foot) foot.innerHTML = "&copy; 2026 Sharan Senthil. Manga art belongs to its artists.";
 
   document.querySelectorAll(".peaks input").forEach(function (cb) {
     cb.checked = store("peak-" + cb.id) === "1";
